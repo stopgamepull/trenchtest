@@ -1,0 +1,261 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>TrenchesTEST</title>
+    <link rel="shortcut icon" href="images/SWORM.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="js/three_and_controls.min.js"></script>
+    <script src="js/p5.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <canvas></canvas>
+
+    <div class="screen flow">
+      <div class="menu-top">
+        <div>TrenchesTEST</div>
+      </div>
+      <div id="pre1">
+        <p>
+          TrenchesTEST: Concept and Mechanics The TrenchesTEST ($TEST) is a
+          self-replicating digital entity engineered to infiltrate, propagate,
+          and dominate networked systems. Designed with an insidious efficiency,
+          $TEST operates as follows:
+        </p>
+        <p>
+          Initial Deployment $TEST is introduced into the system via a
+          vulnerability or a deliberate injection. Once embedded, it initializes
+          its core propagation protocols.
+        </p>
+        <p>
+          Replication and Propagation Leveraging a parabolic growth model,
+          $TEST replicates rapidly. Each compromised host acts as a new
+          deployment vector, infecting interfaces, scripts, and connected
+          devices.
+        </p>
+        <p>
+          Integration and Control $TEST deploys subroutines that inject
+          malicious code into user interfaces, scripts, and applications. This
+          enables it to disguise its presence while continuing its spread.
+        </p>
+        <p>
+          Self-Sustaining Infection The worm's design ensures perpetual
+          expansion, with each new infection amplifying its spread. The growth
+          is exponential, making containment and eradication increasingly
+          difficult over time.
+        </p>
+        <p>Potential Impact</p>
+        <p>
+          Data Integrity: Compromised systems may experience corrupted or
+          altered data. System Performance: Resources are diverted to sustain
+          $TEST’s operations, leading to slowdowns or crashes. Security Breach:
+          Sensitive information becomes vulnerable as $TEST probes and spreads.
+        </p>
+      </div>
+      <div class="menu-bottom">
+        <div><span>TrenchesTEST</span></div>
+      </div>
+    </div>
+    <div class="screen">
+      <div class="fixed-block">
+        <a href="https://t.me/TrenchesTEST" class="custom-button">Telegram</a>
+        <a href="https://x.com/TrenchesTEST" class="custom-button">X</a>
+        <a href="" class="custom-button">Dex</a>
+        <button class="custom-button">$TEST</button>
+      </div>
+      <div class="menu-top">
+        <div>TrenchesTEST</div>
+        <div class="help">F1=Help</div>
+      </div>
+
+      <div class="surface off"></div>
+
+      <div class="info off">
+        <fieldset>
+          <legend>Status</legend>
+          <p class="sb">
+            <span>$TEST amount <var class="currentcluster"></var></span>
+            <span><var class="percent">0</var>%</span>
+          </p>
+          <div class="progress">
+            <div class="fill"></div>
+          </div>
+          <p class="center">
+            Elapsed Time: <time class="elapsedtime">00:00:00</time>
+          </p>
+          <div class="center">Full Optimization</div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Legend</legend>
+          <div class="grid2x2">
+            <div><span class="block used"></span> - Used</div>
+            <div><span class="block unused"></span> - Unused</div>
+            <div><span class="block reading"></span> - Reading</div>
+            <div><span class="block writing"></span> - Writing</div>
+            <div><span class="block bad"></span> - Bad</div>
+            <div><span class="block unmovable"></span> - Unmovable</div>
+          </div>
+          <p>Drive C: 1 block = <var class="clustersperblock"></var> $TESTS</p>
+        </fieldset>
+      </div>
+
+      <div class="menu-bottom">
+        <div>
+          <span>Press</span> Alt <span>or</span> F10
+          <span>to activate menu</span>
+        </div>
+        <div>| <span>TrenchesTEST</span></div>
+      </div>
+
+      <section class="modals">
+        <div class="testing dialog">
+          <p>Testing TrenchesTEST memory...</p>
+        </div>
+
+        <div class="reading dialog" hidden="">
+          <p>Reading worm memory card information....</p>
+        </div>
+
+        <div class="analyzing dialog" hidden="">
+          <p>Analyzing worm information....</p>
+          <p class="folders center">GAMES</p>
+        </div>
+
+        <div class="finished dialog" hidden="">
+          <p class="center">Optimization for $TEST : Complete</p>
+          <div>
+            <p class="center">
+              <svg class="worm" x="0px" y="0px" viewBox="0 0 316 40" style="enable-background: new 0 0 316 40" xml:space="preserve">
+                <path d="M6.5,6.5c30,0,30,26.9,60,26.9c30,0,30-26.9,60-26.9c30,0,30,26.9,60,26.9c30,0,30-26.9,60-26.9
+	c30,0,30,26.9,60,26.9"></path>
+              </svg>
+            </p>
+          </div>
+          <div style="display: flex">
+            <div class="dialoga" href="" id="infoButton">$TEST info</div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="screen flow">
+      <div class="menu-top">
+        <div>TrenchesTEST</div>
+      </div>
+      <div id="pre2">
+        --SYSTEM ALERT: $TEST DEPLOYMENT INITIATED--
+        <br>
+        <br>
+        >> Initialization Sequence: SUCCESS
+        <br>
+        <br>
+        >> Node Propagation: ACTIVATED
+        <br>
+        <br>
+        >> Infection Rate: PARABOLIC GROWTH DETECTED
+        <br>
+        <br>
+        >> Primary Host Compromise: CONFIRMED
+        <br>
+        <br>
+        >> Network Expansion: ENGAGED
+        <br>
+        <br>
+        >> Interface Injection: SUCCESSFUL
+        <br>
+        <br>
+        >> Script Hijacking: IN PROGRESS
+        <br>
+        <br>
+        --SYSTEM NOTICE: $TEST IS LIVE-- WARNING: The $TEST payload is
+        designed to replicate indefinitely. Each infected node becomes a new
+        propagator, exponentially increasing its reach. Termination protocols
+        not detected. Network security compromised. --END TRANSMISSION--
+      </div>
+      <div class="menu-bottom">
+        <div><span>TrenchesTEST</span></div>
+      </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <div class="modal" id="infoModal">
+      <button class="close-button" id="closeInfoModal">X</button>
+      <div class="modal-content">
+        <p>$TEST: Characteristics & Traits</p>
+        <p>Core Traits</p>
+        <p>Self-Replicating Efficiency: 31%</p>
+        <p>
+          Ability to duplicate itself across systems without errors or
+          detection.
+        </p>
+        <p>Stealth Capability: 78%</p>
+        <p>
+          Remains hidden from firewalls, antivirus programs, and system admins.
+        </p>
+        <p>Adaptability: 56%</p>
+        <p>Modifies its code to match the architecture of the host system.</p>
+        <p>Spread Speed: 43%</p>
+        <p>Rate at which it propagates through connected networks.</p>
+        <p>System Resource Drain: 22%</p>
+        <p>
+          Amount of memory and processing power consumed by $TEST operations.
+        </p>
+        <p>Special Abilities</p>
+        <p>Parabolic Growth Factor: +50%</p>
+        <p>
+          Each infection exponentially increases its overall replication rate.
+        </p>
+        <p>Script Mimicry: 72%</p>
+        <p>Ability to imitate harmless scripts, avoiding detection.</p>
+        <p>Data Cloaking: 81%</p>
+        <p>Encrypts its own code to blend with normal system data.</p>
+        <p>Overload Protocol Activation: 35%</p>
+        <p>
+          Can force infected systems to crash by consuming excessive resources.
+        </p>
+        <p>Passive Traits</p>
+        <p>Hive Mind Connectivity: 62%</p>
+        <p>
+          Shares information across all infected nodes, improving efficiency.
+        </p>
+        <p>Code Integrity: 85%</p>
+        <p>
+          Maintains functional code even under system strain or partial
+          corruption.
+        </p>
+        <p>Network Whisper: 49%</p>
+        <p>Masks its communications as typical network traffic.</p>
+        <p>Weaknesses</p>
+        <p>Detection Risk via Isolation Protocols: 68%</p>
+        <p>Susceptible to air-gapped or isolated systems.</p>
+        <p>Spread Inaccuracy in Complex Networks: 27%</p>
+        <p>
+          Struggles to replicate effectively in systems with irregular
+          architecture.
+        </p>
+        <p>Code Fragmentation Risk During Rapid Propagation: 19%</p>
+        <p>High-speed spread can lead to errors in its replication process.</p>
+      </div>
+    </div>
+
+    <div class="scrolling-wrapper">
+      <div class="scrolling-text">
+        $TEST $TEST $TEST $TEST $TEST $TEST $TEST $TEST $TEST $TEST
+        $TEST $TEST $TEST $TEST $TEST $TEST $TEST $TEST $TEST $TEST
+        $TEST $TEST $TEST $TEST
+      </div>
+    </div>
+
+    <div class="scrolling-wrapper top">
+      <div class="scrolling-text right">
+        $TEST $TEST $TEST $TEST $TEST $TEST $TEST $TEST $TEST $TEST
+        $TEST $TEST $TEST $TEST $TEST $TEST $TEST $TEST $TEST $TEST
+        $TEST $TEST $TEST $TEST
+      </div>
+    </div>
+    <script src="js/index.js"></script>
+  
+
+</body></html>

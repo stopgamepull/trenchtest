@@ -1,0 +1,487 @@
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Mono:700");
+
+:root {
+  --bgColor: #5561ff;
+  --cyanColor: #44f0ff;
+  --redColor: #8f1b0e;
+  --greyColor: #aca8aa;
+  --blueColor: #0f06a6;
+  --normalFont: "IBM Plex Mono", monospaced;
+}
+
+body {
+  margin: 0;
+  font-family: var(--normalFont);
+  background: black;
+  font-size: 21px;
+  display: flex;
+  align-items: center;
+  height: 98vh;
+
+  background-image: -webkit-linear-gradient(top left, #020a0f, #00070a);
+  background-image: -moz-linear-gradient(top left, #002339, #00070a);
+  background-image: linear-gradient(top left, #002339, #00070a);
+}
+
+.screen {
+  width: 1024px;
+  height: 600px;
+  background: var(--bgColor);
+  border: 3px solid #000;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.menu-top {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.help {
+  cursor: pointer;
+  padding: 0 10px;
+  user-select: none;
+}
+
+.help:active {
+  background: black;
+  color: white;
+}
+
+.menu-bottom {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-bottom > div {
+  padding: 0 15px;
+}
+
+.menu-bottom span {
+  color: var(--redColor);
+}
+
+/* Surface */
+
+.surface {
+  max-width: 95%;
+  margin: 1em auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+p {
+  text-align: left;
+}
+
+.block {
+  color: white;
+  font-size: 18px;
+  height: 21px;
+  display: inline-block;
+}
+
+.block::before {
+  width: 12px;
+  height: 21px;
+  display: flex;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.block.used::before {
+  content: "•";
+  height: 20px;
+  display: inline-block;
+  color: var(--bgColor);
+  background: yellow;
+}
+
+.block.used.frag::before {
+  background: white;
+}
+
+.block.unused::before {
+  content: "░";
+}
+
+.block.reading::before {
+  content: "r";
+  background: blue;
+  color: white;
+  transform: translateY(2px);
+}
+
+.block.writing::before {
+  content: "W";
+  background: blue;
+  color: white;
+  transform: translateY(2px);
+}
+
+.block.bad::before {
+  content: "B";
+  height: 22px;
+  color: var(--redColor);
+  background: black;
+  transform: translateY(2px);
+}
+
+.block.unmovable::before {
+  content: "X";
+}
+
+/* Info */
+
+.info {
+  display: flex;
+}
+
+.info fieldset {
+  border: 2px solid white;
+  text-align: center;
+  color: white;
+  width: 100%;
+  margin: 0 10px 10px 10px;
+  min-height: 100px;
+}
+
+.info fieldset p {
+  margin: 0;
+}
+
+.info fieldset legend {
+  color: yellow;
+}
+
+.sb {
+  display: flex;
+  justify-content: space-between;
+}
+
+.progress {
+  width: 100%;
+  height: 22px;
+  background: #8791ff;
+}
+
+.progress .fill {
+  width: 0%;
+  height: 100%;
+  background: white;
+}
+
+.grid2x2 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  text-align: left;
+}
+
+/* Modals */
+
+.modals {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.dialog {
+  pointer-events: auto;
+  display: inline-block;
+  border: 3px solid white;
+  background: var(--cyanColor);
+  color: black;
+  font-weight: 700;
+  box-shadow: 15px 15px 0 black;
+  padding: 40px 60px;
+}
+
+.flow {
+  width: 350px;
+  padding: 10px;
+}
+
+#pre1,
+#pre2 {
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 16px; /* Ширина скроллбара */
+  height: 16px; /* Высота горизонтального скроллбара */
+  background-color: #f0f0f0; /* Фон скроллбара */
+  border: 2px solid #c0c0c0; /* Граница в стиле Windows 95 */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c0c0c0; /* Цвет ползунка */
+  border: 2px solid #f0f0f0; /* Граница ползунка */
+  box-shadow: inset 1px 1px #ffffff, inset -1px -1px #808080; /* Эффект "вдавленности" */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a0a0a0; /* Темнее при наведении */
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #808080; /* Ещё темнее при клике */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f0f0f0; /* Фон трека */
+  border: 2px solid #c0c0c0; /* Граница трека */
+  box-shadow: inset 1px 1px #ffffff, inset -1px -1px #808080; /* Эффект "вдавленности" */
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #f0f0f0; /* Цвет угловых соединений */
+  border: 2px solid #c0c0c0;
+}
+
+/* Для горизонтальных скроллбаров */
+::-webkit-scrollbar-horizontal {
+  height: 16px; /* Высота горизонтального скроллбара */
+}
+
+.dialog .dialoga {
+  background: #888;
+  color: black;
+  font-family: var(--normalFont);
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 2px 45px;
+  margin: 0 10px;
+  border: 0;
+  box-shadow: 8px 8px 0 black;
+  margin-top: 50px;
+  margin-right: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.dialog .dialoga:active {
+  box-shadow: none;
+  position: relative;
+  top: 8px;
+  left: 8px;
+}
+
+.finished > div {
+  max-width: 500px;
+}
+
+.off {
+  opacity: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.modal {
+  overflow-y: scroll;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  z-index: 1000;
+  height: 600px;
+}
+.modal.active {
+  display: block;
+}
+.modal-header {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.modal-content {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.close-button {
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  float: right;
+}
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+.overlay.active {
+  display: block;
+}
+
+canvas {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.worm {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2);
+  width: 300px;
+  margin-left: -50px;
+}
+
+.worm path {
+  stroke-dasharray: 203px, 345px;
+  stroke-dashoffset: 0;
+  fill: none;
+  stroke: #eeaf9c;
+  stroke-width: 13;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  animation: worm 1s linear infinite;
+}
+
+@keyframes worm {
+  0% {
+    stroke-dashoffset: 0px;
+    transform: translateX(119px);
+  }
+  100% {
+    stroke-dashoffset: -136px;
+    transform: translateX(0);
+  }
+}
+
+.scrolling-wrapper {
+  background: var(--bgColor);
+  border: 2px solid white;
+  position: absolute;
+  bottom: 3px;
+  right: 0px;
+  overflow: hidden; /* Скрыть содержимое за пределами видимой области */
+  width: 100%;
+  height: 50px; /* Высота контейнера */
+}
+
+.top {
+  position: absolute;
+  top: 3px;
+  right: 0px;
+  overflow: hidden; /* Скрыть содержимое за пределами видимой области */
+  width: 100%;
+  height: 50px; /* Высота контейнера */
+}
+
+/* Прокручиваемый текст */
+.scrolling-text {
+  font-family: var(--normalFont);
+  font-weight: 500;
+  white-space: nowrap;
+  display: inline-block; /* Для корректной работы анимации */
+  animation: scroll 10s linear infinite;
+  font-size: 2rem;
+  color: #000;
+}
+
+.right {
+  font-family: var(--normalFont);
+  font-weight: 500;
+  white-space: nowrap;
+  display: inline-block; /* Для корректной работы анимации */
+  animation: scrol 10s linear infinite;
+  font-size: 2rem;
+  color: #000;
+}
+
+@keyframes scrol {
+  0% {
+    transform: translateX(-100%); /* Текст за пределами справа */
+  }
+  100% {
+    transform: translateX(100%); /* Текст полностью уходит влево */
+  }
+}
+
+/* Анимация прокрутки */
+@keyframes scroll {
+  0% {
+    transform: translateX(100%); /* Текст за пределами справа */
+  }
+  100% {
+    transform: translateX(-100%); /* Текст полностью уходит влево */
+  }
+}
+
+.fixed-block {
+  z-index: 12414124;
+  position: absolute;
+  top: -66px;
+  right: 180px;
+  width: auto;
+  padding: 10px;
+  background: var(--bgColor);
+  display: flex;
+  gap: 10px;
+}
+
+/* Неоновая кнопка */
+.custom-button {
+  background: #888;
+  color: black;
+  font-family: var(--normalFont);
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 2px 45px;
+  margin: 0 10px;
+  border: 0;
+  box-shadow: 8px 8px 0 black;
+  margin-right: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.custom-button:hover {
+  box-shadow: none;
+  position: relative;
+  top: 8px;
+  left: 8px;
+}
+
+.custom-button:active {
+  transform: scale(0.98);
+}
+
+/* Ссылка без подчеркивания */
+a {
+  text-decoration: none;
+}
